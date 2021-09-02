@@ -14,7 +14,6 @@ public class ProductUpdateDaoImpl implements IProductUpdateDao{
 
 	@Override
 	public int updateProductsDao(SessionFactory session, @Valid ProductUpdateRequest product) {
-		// TODO Auto-generated method stub
 		return session.getCurrentSession().createSQLQuery("UPDATE products set name=:name ,price=:price where id=:id")
 				.setParameter("price", product.getPrice())
 				.setParameter("name", product.getName())

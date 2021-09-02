@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.postgresdemo.service.IProductUpdateService;
 import com.example.postgresdemo.to.request.ProductUpdateRequest;
 import com.example.postgresdemo.to.request.ProductUpdateResponse;
-
+/**
+ * ProductUpdateController
+ * @author matam
+ *
+ */
 @RestController
 public class ProductUpdateController {
 	
