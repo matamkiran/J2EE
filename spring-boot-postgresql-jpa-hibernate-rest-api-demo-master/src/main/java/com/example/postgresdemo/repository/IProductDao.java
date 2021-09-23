@@ -21,4 +21,7 @@ public interface IProductDao {
 
 	BigInteger getProductTotalcountDao(SessionFactory session);
 
+	Product fetchProductDetailsActive(SessionFactory session, Integer id);
+
+
 }

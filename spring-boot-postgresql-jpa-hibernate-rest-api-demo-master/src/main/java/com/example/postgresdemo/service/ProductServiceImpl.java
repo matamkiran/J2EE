@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 
 import com.example.postgresdemo.model.Product;
 import com.example.postgresdemo.repository.IProductDao;
+import com.example.postgresdemo.to.request.ProductUpdateDemoRequest;
+import com.example.postgresdemo.to.request.ProductUpdateRequest;
 
 	@Service
 	public class ProductServiceImpl implements IProductService{
@@ -53,6 +55,13 @@ import com.example.postgresdemo.repository.IProductDao;
 			return iProductDao.getProductTotalcountDao(session);
 		}
 
-		
+		@Override
+		@Transactional
+		public Product getProductDetailsActive(Integer id) {
+			// TODO Auto-generated method stub
+			return iProductDao.fetchProductDetailsActive(session,id);
+		}
+
+	
 	}
 

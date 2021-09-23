@@ -30,11 +30,20 @@ public class Product {
 	    private Integer price;
 
 		
-
+	    @Column(columnDefinition = "is_deleted")
+	    private boolean delete;
+	    
+	    
+	
+		public boolean isDelete() {
+			return delete;
+		}
+		public void setDelete(boolean delete) {
+			this.delete = delete;
+		}
 		public Integer getId() {
 			return id;
 		}
-
 		public void setId(Integer id) {
 			this.id = id;
 		}

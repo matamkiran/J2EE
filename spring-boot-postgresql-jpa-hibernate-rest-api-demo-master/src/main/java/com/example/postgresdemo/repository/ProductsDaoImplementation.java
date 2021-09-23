@@ -45,4 +45,10 @@ public class ProductsDaoImplementation implements IProductDao{
 	public BigInteger getProductTotalcountDao(SessionFactory session) {
 		return (BigInteger) session.getCurrentSession().createSQLQuery("select count(1) from products").uniqueResult();
 	}
+
+	@Override
+	public Product fetchProductDetailsActive(SessionFactory session, Integer id) {
+		return (Product) session.getCurrentSession().createQuery("From Product WHERE id=:id and delete= false ")
+				.setParameter("id", id).uniqueResult();
+	}
 }
